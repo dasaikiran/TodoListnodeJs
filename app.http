@@ -1,0 +1,73 @@
+
+
+get http://localhost:3000/todos/?status=TO%20DO
+
+
+get http://localhost:3000/todos/?priority=HIGH
+
+
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+get http://localhost:3000/todos/?search_q=Buy
+
+
+get http://localhost:3000/todos/?category=WORK&status=DONE
+
+
+get http://localhost:3000/todos/?category=HOME
+
+
+get http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+get http://localhost:3000/todos/3/
+
+
+get http://localhost:3000/agenda/?date=2021-12-31
+
+
+post http://localhost:3000/todos/
+Content-Type : application/json
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+
+put http://localhost:3000/todos/2/
+Content-Type : application/json
+
+{ "status": "DONE" }
+
+
+put http://localhost:3000/todos/2/
+Content-Type : application/json
+
+{ "priority": "HIGH" }
+
+put http://localhost:3000/todos/2/
+Content-Type : application/json
+
+{
+"todo": "Clean the garden"
+}
+
+
+put http://localhost:3000/todos/2/
+Content-Type : application/json
+
+{ "category": "LEARNING" }
+
+
+put http://localhost:3000/todos/2/
+Content-Type : application/json
+
+{ "dueDate": "2021-01-12" }
+
+
+delete http://localhost:3000/todos/5/
